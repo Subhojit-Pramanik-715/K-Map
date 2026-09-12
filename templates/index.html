@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>K-MAP SIMPLIIFIER</title>
+    <link rel = "stylesheet" href = "{{ url_for('static', filename = 'style.css') }}">
+
+</head>
+
+<body>
+
+    <div class = "section header">
+
+        <h1>K-MAP SIMPLIFIER</h1>
+        <p>4-VARIABLE KARNAUGH MAP SIMPLIFIER & VISUALIZER</p>
+
+    </div>
+
+    <div class = "section">
+
+        <h2>ENTER MINTERMS</h2>
+        <label for = "minterms">MINTERMS :</label>
+        <input type = "text" id = "minterms" placeholder = "Example : 0, 1, 2, 5, 7">
+        <button id = "solvebutton">SOLVE K-MAP</button>
+
+    </div>
+
+    <div class = "section">
+
+        <h2>K-MAP</h2>
+        <p>4-VARIABLE KARNAUGH MAP</p>
+
+    </div>
+
+    <table>
+
+        <tr>
+
+            <th>CD / AB</th>
+            <th>00</th>
+            <th>01</th>
+            <th>11</th>
+            <th>10</th>
+
+        </tr>
+
+        <tr>
+
+            <th>00</th>
+            <td>0</th>
+            <td>0</th>
+            <td>0</th>
+            <td>0</th>
+            
+        </tr>
+
+        <tr>
+
+            <th>01</th>
+            <td>0</th>
+            <td>0</th>
+            <td>0</th>
+            <td>0</th>
+            
+        </tr>
+
+        <tr>
+
+            <th>11</th>
+            <td>0</th>
+            <td>0</th>
+            <td>0</th>
+            <td>0</th>
+            
+        </tr>
+
+        <tr>
+
+            <th>10</th>
+            <td>0</th>
+            <td>0</th>
+            <td>0</th>
+            <td>0</th>
+            
+        </tr>
+
+    </table>
+
+    <div class = "section">
+
+        <h2>SIMPLIFIED BOOLEAN EXPRESSION</h2>
+        <p id = "result">RESULT WILL APPEAR HERE.</p>
+
+    </div>
+
+    <div class = "section">
+
+        <h2>SOLUTION STEPS</h2>
+
+        <ol id = "steps">
+
+            <li>ENTER THE REQUIRED MINTERMS.</li>
+            <li>THE K-MAP WILL BE POPULATED.</li>
+            <li>VALID GROUPS WILL BE IDENTIFIED.</li>
+            <li>THE SIMPLIFIED BOOLEAN EXPRESSION WILL BE GENERATED.</li>
+
+        </ol>
+
+    </div>
+
+    <script src  = "{{ url_for('static', filename = 'script.js')}}"></script>
+    
+</body>
+
+</html>
